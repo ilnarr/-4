@@ -24,3 +24,8 @@ void readFile(vector<string>& v) {
         v.push_back(line);
     }
 }
+void writeFile(const vector<string>& v) {
+    ofstream fout("output.txt");
+    for (auto& s : v)
+        fout << s << "\n";
+}
