@@ -16,3 +16,12 @@ int main() {
 
     return 0;
 }
+
+void readFile(vector<string>& v) {
+    ifstream fin("input.txt");
+    string line;
+    while (getline(fin, line)) {
+        v.push_back(line);
+    }
+}
+
