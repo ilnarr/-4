@@ -16,12 +16,11 @@ int main() {
 
     return 0;
 }
-void printLines(const vector<string>& v) {
-    for (auto& s : v)
-        cout << s << endl;
-}
-void writeFile(const vector<string>& v) {
-    ofstream fout("output.txt");
-    for (auto& s : v)
-        fout << s << "\n";
+void readFile(vector<string>& v) {
+    ifstream fin("input.txt");
+    string line;
+
+    while (getline(fin, line)) {
+        v.push_back(line);
+    }
 }
